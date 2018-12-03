@@ -60,6 +60,7 @@ public class TelegramService {
 		ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
         System.out.println(response);
         JSONObject result = new JSONObject(response.getBody());
+        System.out.println("test");
       
         return result.getString("text");
 	}
